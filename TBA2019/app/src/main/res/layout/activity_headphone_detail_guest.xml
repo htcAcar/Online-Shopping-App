@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HeadphoneActivityDetail">
+
+    <ImageView
+        android:id="@+id/ProductImage1"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toTopOf="@+id/BrandLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_headphone"
+        tools:layout_editor_absoluteX="136dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+
+    <LinearLayout
+        android:id="@+id/BrandLayout"
+        android:layout_width="427dp"
+        android:layout_height="48dp"
+        android:layout_alignTop="@+id/ProductImage1"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="152dp"
+        app:layout_constraintBottom_toTopOf="@+id/NameLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:text="Brand : "
+            android:textColor="#94053e"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/headBrandText"
+            android:layout_width="258dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:textSize="26sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/NameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_below="@+id/BrandLayout"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/ColorLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/BrandLayout"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:text="Name : "
+            android:textColor="#94053e"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/nameTexthead"
+            android:layout_width="258dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:textSize="26sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ColorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_below="@+id/NameLayout"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/CableLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/NameLayout"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="307dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:text="Color : "
+            android:textColor="#94053e"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/headColorText"
+            android:layout_width="258dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:textSize="26sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/CableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_below="@+id/ColorLayout"
+        android:layout_marginTop="10dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/PriceLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ColorLayout"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="378dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:text="Cable length : "
+            android:textColor="#94053e"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/headCableText"
+            android:layout_width="258dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:textSize="26sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/PriceLayout"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_below="@+id/CableLayout"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/CableLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:text="Price (TL): "
+            android:textColor="#94053e"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/headPriceText"
+            android:layout_width="258dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:textSize="26sp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/reviewListScrollView"
+        android:layout_width="395dp"
+        android:layout_height="211dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/list_border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PriceLayout" />
+
+</android.support.constraint.ConstraintLayout>

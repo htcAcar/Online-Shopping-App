@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_movie_listing"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eee"
+    tools:context=".HeadphonesActivity">
+
+    <ListView
+        android:id="@+id/itemListDyn"
+        android:layout_width="wrap_content"
+        android:layout_height="452dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="115dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginBottom="164dp"
+        android:background="@drawable/list_border"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="5dp">
+
+    </ListView>
+
+    <Button
+        android:id="@+id/goToProfileButton"
+        android:layout_width="133dp"
+        android:layout_height="58dp"
+        android:layout_alignLeft="@+id/itemListDyn"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/itemListDyn"
+        android:layout_marginTop="31dp"
+        android:background="@drawable/round_edge"
+        android:text="GO TO PROFILE"
+        android:textColor="#94053e" />
+
+    <Button
+        android:id="@+id/removeItemsButton"
+        android:layout_width="122dp"
+        android:layout_height="58dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/goToProfileButton"
+        android:layout_marginEnd="23dp"
+        android:layout_marginRight="23dp"
+        android:textColor="#94053e"
+        android:background="@drawable/round_edge"
+        android:text="REMOVE ALL ITEMS" />
+
+    <Button
+        android:id="@+id/buyButton"
+        android:layout_width="69dp"
+        android:layout_height="38dp"
+        android:layout_alignBaseline="@+id/goToProfileButton"
+        android:layout_centerHorizontal="true"
+        android:textColor="#94053e"
+        android:background="@drawable/round_edge"
+        android:text="BUY" />
+
+</RelativeLayout>

@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Thu Jun 20 23:59:32 EET 2019
+0.baseType=DIRECTORY
+0.base=C\:\\Users\\Utku\\Desktop\\TBA\\TBA2019\\app\\build\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
+0.path=fonts/Pacifico.ttf
+0.set=ASSET
+count=1

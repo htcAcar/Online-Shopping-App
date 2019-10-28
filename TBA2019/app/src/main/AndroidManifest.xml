@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.tba_osa_2019">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".TVsActivityGuest"></activity>
+        <activity android:name=".TVActivityDetailGuest" />
+        <activity android:name=".PhonesActivityGuest" />
+        <activity android:name=".PhoneActivityDetailGuest" />
+        <activity android:name=".HeadphonesActivityGuest" />
+        <activity android:name=".HeadphoneActivityDetailGuest" />
+        <activity android:name=".GuestHomePage" />
+        <activity android:name=".ShowFavorites" />
+        <activity android:name=".AddCommentToProduct" />
+        <activity android:name=".TVsActivity" />
+        <activity android:name=".AddHeadphoneActivity" />
+        <activity android:name=".AddPhoneActivity" />
+        <activity android:name=".AddTvActivity" />
+        <activity android:name=".TVActivityDetail" />
+        <activity android:name=".HeadphonesActivity" />
+        <activity android:name=".HeadphoneActivityDetail" />
+        <activity android:name=".PhonesActivity" />
+        <activity android:name=".PhoneActivityDetail" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".ShoppingCartActivity" />
+        <activity android:name=".HomePageActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".RegistrationActivity" />
+        <activity android:name=".SellerHomePageActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

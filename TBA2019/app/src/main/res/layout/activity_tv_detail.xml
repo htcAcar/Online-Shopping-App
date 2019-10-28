@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TVActivityDetail">
+
+    <ImageView
+        android:id="@+id/ProductImage1"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_tv" />
+
+
+    <LinearLayout
+        android:id="@+id/BrandLayout"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_alignTop="@+id/ProductImage1"
+        android:layout_marginTop="160dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ProductImage1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:text="Brand : "
+            android:textColor="#94053e"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/brandTextTV"
+            android:layout_width="258dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:textSize="26sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/NameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_below="@+id/BrandLayout"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/nameEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/BrandLayout" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:text="Name : "
+            android:textColor="#94053e"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/nameTextTV"
+            android:layout_width="258dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:textSize="26sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ScreenLayout"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_below="@+id/NameLayout"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/nameEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/NameLayout">
+
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:text="Screensize : "
+            android:textColor="#94053e"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/screenTextTV"
+            android:layout_width="258dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:textSize="26sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ResolutionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_below="@+id/ScreenLayout"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/nameEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ScreenLayout">
+
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:text="Resolution : "
+            android:textColor="#94053e"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/resTextTV"
+            android:layout_width="258dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:textSize="26sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/PriceLayout"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_below="@+id/ResolutionLayout"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ResolutionLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:text="Price (TL): "
+            android:textColor="#94053e"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/priceTextTV"
+            android:layout_width="258dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:textSize="26sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/AddCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/round_edge"
+        android:text="Add to Cart"
+        android:textColor="#94053e"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PriceLayout" />
+
+    <Button
+        android:id="@+id/AddFavorites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_toStartOf="@+id/AddCart"
+        android:layout_toLeftOf="@+id/AddCart"
+        android:background="@drawable/round_edge"
+        android:text="Add Favorıtes"
+        android:textColor="#94053e"
+        app:layout_constraintEnd_toStartOf="@+id/AddCart"
+        app:layout_constraintHorizontal_bias="0.363"
+        app:layout_constraintStart_toEndOf="@+id/addCommentButtonView"
+        app:layout_constraintTop_toBottomOf="@+id/PriceLayout" />
+
+    <Button
+        android:id="@+id/addCommentButtonView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_toStartOf="@+id/AddCart"
+        android:layout_toLeftOf="@+id/AddCart"
+        android:background="@drawable/round_edge"
+        android:text="Add Comment"
+        android:textColor="#94053e"
+        app:layout_constraintEnd_toStartOf="@+id/AddCart"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PriceLayout" />
+
+    <ListView
+        android:layout_width="395dp"
+        android:layout_height="190dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="533dp"
+        android:background="@drawable/list_border"/>
+
+
+</android.support.constraint.ConstraintLayout>

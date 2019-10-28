@@ -1,0 +1,163 @@
+<?php
+include '../../db/db_connect.php';
+$response = array();
+ 
+//Check for mandatory parameters
+if(isset($_GET['name'])
+	&&isset($_GET['brand'])
+	&&isset($_GET['color'])
+	&&isset($_GET['cable_length'])
+	&&isset($_GET['price'])
+	&&isset($_GET['seller_ID'])){
+	$name = $_GET['name'];
+	$brand = $_GET['brand'];
+	$color = $_GET['color'];
+	$cable_length = $_GET['cable_length'];
+	$price = $_GET['price'];
+	$seller_ID = $_GET['seller_ID'];
+	//$arr = array(1, 2, 3);
+	//$arr_str = serialize($arr);
+	//Query to insert a movie
+	$query = "INSERT INTO products(product_ID, seller_ID, category) VALUES (?,?,?)";
+	$query2 = "INSERT INTO headphone( name, color, brand, cable_length, price) VALUES (?,?,?,?,?)";
+	
+	//Prepare the query
+	if($stmt = $con->prepare($query)){
+
+		//Bind parameters
+		$stmt->bind_param("sssss",$name, $brand, $color, $cable_length, $price);
+		//Exceting MySQL statement
+		$res = $stmt->execute();
+		var_dump($stmt->insert_id);
+		$product_ID=$stmt->insert_id;
+		$category="headphone";
+		//Check if data got inserted
+		if($stmt->affected_rows == 1){
+			$response["success"] = 1;			
+			$response["message"] = "Headphone item Successfully Added";	
+ 
+ 			////////////
+			if($stmt2 = $con->prepare($query2)){
+
+				//Bind parameters
+				$stmt2->bind_param("iis",$product_ID, $seller_ID, $category);
+				//Exceting MySQL statement
+				$res = $stmt2->execute();
+				//Check if data got inserted
+				if($stmt2->affected_rows == 1){			
+					$response["message2"] = "Headphone Successfully Added to your products table";			
+					
+				}else{
+					//Some error while inserting
+					$response["success"] = 0;
+					$response["message"] = "Error while adding the item to your cart";
+				}
+								
+			}else{
+				//Some error while inserting
+				$response["success"] = 0;
+				$response["message"] = mysqli_error($con);
+			}		
+			/////////////
+	
+		}else{
+			//Some error while inserting
+			$response["success"] = 0;
+			$response["message"] = "Error while adding headphone item";
+		}					
+	}else{
+		//Some error while inserting
+		$response["success"] = 0;
+		$response["message"] = mysqli_error($con);
+	}
+ 
+}else{
+	//Mandatory parameters are missing
+	$response["success"] = 0;
+	$response["message"] = "missing mandatory parameters";
+}
+//Displaying JSON response
+//http://localhost/tba-db/products/headphone/add_headphone.php?name=x&brand=x&color=x&cable_length=x&price=10
+echo json_encode($response);
+
+
+
+			
+?>
+
+
+<?php
+// Import PHPMailer classes into the global namespace
+// These must be at the top of your script, not inside a function
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+// Load Composer's autoloader
+require 'vendor/autoload.php';
+
+// Instantiation and passing `true` enables exceptions
+$mail = new PHPMailer(true);
+
+try {
+    //Server settings
+    $mail->SMTPDebug = 2;                                       // Enable verbose debug output
+    $mail->isSMTP();                                            // Set mailer to use SMTP
+    $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+    $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+    $mail->Username   = 'tba.contact.system@gmail.com';                     // SMTP username
+    $mail->Password   = 'tba12345';                               // SMTP password
+    $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
+    $mail->Port       = 587;                                    // TCP port to connect to
+
+    //Recipients
+    $mail->setFrom('tba.contact.sytem@gmail.com', 'TBA Ltd.');
+    $mail->addAddress('tba.contact.sytem@gmail.com', 'Joe User');     // Add a recipient
+    
+
+    // Content
+    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->Subject = 'Testing PHP Mailer';
+    $mail->Body    = 'This message is sent from <b>TBA.</b>';
+    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+    $mail->send();
+    echo 'Message has been sent';
+} catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+}
+
+?>
+
+<?php
+//index.php
+
+		require 'class/class.phpmailer.php';
+		$mail = new PHPMailer;
+		$mail->IsSMTP();								//Sets Mailer to send message using SMTP
+		$mail->Host = 'smtp.gmail.com';		//Sets the SMTP hosts of your Email hosting, this for Godaddy
+		$mail->Port = '80';								//Sets the default SMTP server port
+		$mail->SMTPAuth = true;							//Sets SMTP authentication. Utilizes the Username and Password variables
+		$mail->Username = 'TBA Ltd.';					//Sets SMTP username
+		$mail->Password = 'tba12345';					//Sets SMTP password
+		$mail->SMTPSecure = 'tls';							//Sets connection prefix. Options are "", "ssl" or "tls"
+		$mail->From = 'tba.contact.system@gmail.com';					//Sets the From email address for the message
+		$mail->FromName = 'TBA Ltd.';				//Sets the From name of the message
+		$mail->AddAddress('tba.contact.system@gmail.com', 'Joe User');		//Adds a "To" address
+		$mail->AddCC('tba.contact.system@gmail.com', 'Joe User');	//Adds a "Cc" address
+		$mail->WordWrap = 50;							//Sets word wrapping on the body of the message to a given number of characters
+		$mail->IsHTML(true);							//Sets message type to HTML				
+		$mail->Subject = 'Testing PHP Mailer';				//Sets the Subject of the message
+		$mail->Body = 'This message is sent from <b>TBA.</b>';		//An HTML or plain text message body
+		if($mail->Send())								//Send an Email. Return true on success or false on error
+		{
+			$error = '<label class="text-success">Thank you for contacting us</label>';
+		}
+		else
+		{
+			$error = '<label class="text-danger">There is an Error</label>';
+		}
+		var_dump($error);
+
+
+
+?>

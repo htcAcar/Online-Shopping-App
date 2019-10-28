@@ -1,0 +1,95 @@
+******************** Become Seller ****************
+
+	customers/become_seller.php 
+	=> args: customer_ID, email, password
+
+	--------------------------------------------
+	{"success":1,"message":"Yay! You became a seller :)"}
+	{"success":0,"message":"You are already a seller :)"}
+
+******************** Log in Seller ****************
+
+	sellers/login_seller.php 
+	=> args: seller_ID, email, password
+
+
+
+******************** Add TV *********************
+
+	products/tv/add_tv.php 
+	=> args: name, brand, screen_size, resolution, price
+	=> PS: price is "int" type
+	--------------------------------------------
+	{"success":1,"message":"TV item Successfully Added"}
+
+******************** Add headphone *****************
+
+	products/headphone/add_headphone.php 
+	=> args: name, color, brand, cable_length, price
+	=> PS: price is "int" type
+	--------------------------------------------
+	{"success":1,"message":"Headphone item Successfully Added"}
+
+******************** Add phone *****************
+
+	products/phone/add_phone.php 
+	=> args: name, color, screen_size, brand, memory, camera, price
+	=> PS: price is "int" type
+	--------------------------------------------
+	{"success":1,"message":"Phone item Successfully Added"}
+
+
+
+******************** Show TVs *********************
+
+	products/tv/show_tvs.php
+	--------------------------------------------  
+	{"success":1,"data":[{"product_ID":1,"name":"","brand":"Sunny","screen_size":"32","resolution":" 1366 x 768 HD","price":800},
+	{"product_ID":2,"name":"","brand":"Samsung","screen_size":"35","resolution":" 1566 x 564 Full HD","price":1500},
+	{"product_ID":3,"name":"","brand":"Grundig","screen_size":"32","resolution":"1920 x 540 Full HD","price":1400},
+	{"product_ID":4,"name":"","brand":"Philips","screen_size":"32","resolution":"1920 x 1080 Full HD","price":1400},
+	{"product_ID":5,"name":"x","brand":"x","screen_size":"x","resolution":"x","price":0},
+	{"product_ID":6,"name":"x","brand":"x","screen_size":"x","resolution":"x","price":10}]}
+
+******************** Show headphones *****************
+
+	products/headphone/show_headphones.php 
+	--------------------------------------------		
+	{"success":1,"data":[{"product_ID":1,"name":"","color":"black","brand":"sony","cable_length":"125cm","price":50},
+	{"product_ID":2,"name":"","color":"white","brand":"Philips","cable_length":"120cm","price":60},
+	{"product_ID":3,"name":"","color":"pink","brand":"Philips","cable_length":"130","price":70},
+	{"product_ID":4,"name":"","color":"green","brand":"sony","cable_length":"120cm","price":56},
+	{"product_ID":5,"name":"x","color":"x","brand":"x","cable_length":"x","price":10}]}
+
+******************** Show phones *****************
+
+	products/phones/show_phones.php 
+	--------------------------------------------
+	{"success":1,"data":[{"product_ID":1,"name":"","color":"black","brand":"Samsung","screen_size":"5.7","memory":"4GB","camera":"16MP","price":2000},
+	{"product_ID":2,"name":"","color":"white","brand":"Huawei","screen_size":"6.21","memory":"3GB","camera":"13MP","price":1700},
+	{"product_ID":3,"name":"","color":"blue","brand":"Samsung","screen_size":"6.1","memory":"4GB","camera":"13MP","price":1500},
+	{"product_ID":4,"name":"","color":"pink","brand":"Apple","screen_size":"5.5","memory":"4GB","camera":"16MP","price":7000},
+	{"product_ID":5,"name":"","color":"black","brand":"Samsung","screen_size":"5.7","memory":"4GB","camera":"16MP","price":0},
+	{"product_ID":6,"name":"","color":"white","brand":"Huawei","screen_size":"6.21","memory":"3GB","camera":"13MP","price":0},
+	{"product_ID":7,"name":"","color":"blue","brand":"Samsung","screen_size":"6.1","memory":"4GB","camera":"13MP","price":0},
+	{"product_ID":8,"name":"","color":"pink","brand":"Apple","screen_size":"5.5","memory":"4GB","camera":"16MP","price":0},
+	{"product_ID":9,"name":"x","color":"x","brand":"x","screen_size":"x","memory":"x","camera":"x","price":0}]}
+
+
+
+******************** Get TV details *************
+
+	products/tv/get_tv_details.php 
+	=> args: product_ID
+
+******************** Get headphone details  *********
+
+	products/headphone/get_headphone_details.php 
+	=> args:  product_ID
+
+*************** Get phone details *****************
+
+	products/phone/get_phone_details.php 
+	=> args:  product_ID
+	--------------------------------------------
+	{"success":1,"data":{"product_ID":"1","name":"","brand":"Sunny","screen_size":"32","resolution":" 1366 x 768 HD","price":"800"}}

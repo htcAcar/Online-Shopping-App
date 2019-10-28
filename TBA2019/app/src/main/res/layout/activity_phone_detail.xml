@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PhoneActivityDetail">
+
+    <ImageView
+        android:id="@+id/ProductImage1"
+        android:layout_width="122dp"
+        android:layout_height="120dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="24dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toTopOf="@+id/nameEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_phone" />
+
+    <LinearLayout
+        android:id="@+id/BrandLayout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/ProductImage1"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ProductImage1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:text="Brand : "
+            android:textColor="#94053e"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/phoneBrandText"
+            android:layout_width="258dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/NameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/BrandLayout"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="247dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/BrandLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:text="Name : "
+            android:textColor="#94053e"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/phoneNameText"
+            android:layout_width="258dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:textSize="26sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ColorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/NameLayout"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="292dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/NameLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:text="Color : "
+            android:textColor="#94053e"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/phoneColorText"
+            android:layout_width="258dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/CameraLayout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/ColorLayout"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="336dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ColorLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:text="Camera : "
+            android:textColor="#94053e"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/phoneCameraText"
+            android:layout_width="258dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:textSize="26sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/MemoryLayout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/CameraLayout"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="386dp"
+        android:layout_marginTop="10dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/CameraLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:text="Memory : "
+            android:textColor="#94053e"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/phoneMemoryText"
+            android:layout_width="258dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:textSize="26sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ScreenSizeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/MemoryLayout"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="437dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/MemoryLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:text="Screen Size : "
+            android:textColor="#94053e"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/phoneScreenText"
+            android:layout_width="258dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/PriceLayout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/ScreenSizeLayout"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="484dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ScreenSizeLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:text="Price (TL): "
+            android:textColor="#94053e"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/phonePriceText"
+            android:layout_width="258dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/AddCartPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:background="@drawable/round_edge"
+        android:text="Add to Cart"
+        android:textColor="#94053e"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PriceLayout" />
+
+    <Button
+        android:id="@+id/AddFavorites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginRight="68dp"
+        android:layout_toStartOf="@+id/AddCartPhone"
+        android:layout_toLeftOf="@+id/AddCartPhone"
+        android:background="@drawable/round_edge"
+        android:text="Add Favorıtes"
+        android:textColor="#94053e"
+        app:layout_constraintEnd_toStartOf="@+id/AddCartPhone"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PriceLayout" />
+
+    <Button
+        android:id="@+id/addCommentButtonView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/round_edge"
+        android:text="ADD COMMENT"
+        android:textColor="#94053e"
+        app:layout_constraintBottom_toTopOf="@+id/_dynamic"
+        app:layout_constraintEnd_toStartOf="@+id/AddCartHead"
+        app:layout_constraintStart_toEndOf="@+id/AddFavorites"
+        app:layout_constraintTop_toBottomOf="@+id/PriceLayout" />
+
+    <ListView
+        android:id="@+id/reviewListScrollView"
+        android:layout_width="395dp"
+        android:layout_height="191dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/list_border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AddCartHead" />
+</android.support.constraint.ConstraintLayout>
